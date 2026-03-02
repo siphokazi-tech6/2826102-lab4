@@ -1,0 +1,77 @@
+.spinner {
+    /* Your styling */
+    animation: spin 1s linear infinite; /* Required */
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    display: none;
+    
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.country-card{
+background:#90E0EF;
+padding: 25px;
+border-radius: 20px;
+margin:20px;
+}
+
+.country-card img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+.border-grid {
+    display: flex; /* or display: flex */
+    flex-wrap: wrap;
+    margin-left: -1px;
+    margin-top: -1px;
+    /* Additional layout properties */
+}
+
+.border-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    min-width: 100px;
+}
+
+.border-item img {
+    display: block;
+    margin: 5px auto;
+}
+
+.border-item p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.error {
+    background-color: #fde8e8;
+    color:#c81e1e /* error color */;
+    border: 1px solid #f8b4b4;
+    padding: 25px;
+    border-radius: 20px;
+    margin: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    display: none;
+    /* Additional styling */
+}
+
+.hidden {
+    display: none;
+}
+
