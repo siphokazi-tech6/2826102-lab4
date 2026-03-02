@@ -13,14 +13,20 @@ async function searchCountry(countryName) {
     document.getElementById('error-message').style.display = 'none';
     
     try {
-        const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}`);
+        const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`);
         
         if (!response.ok){
             throw new Error('Country not found. Please try again.');
         }
         
         const data = await response.json();
-        const country = data[0];
+        
+        // Filter to only show sovereign countries (not territories/regions)
+        const country = data.find(c => c.independent !== false);
+        
+        if (!country) {
+            throw new Error('Country not found. Please try again.');
+        }
         
         countryInfo.innerHTML = `
             <h2>${country.name.common}</h2>

@@ -1,3 +1,53 @@
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 20px;
+    color: #333;
+}
+
+header h1 {
+    margin: 0 0 15px 0;
+    font-size: 2rem;
+}
+
+/* Search Container Styling */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#country-input {
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    max-width: 80%;
+}
+
+#country-input:focus {
+    outline: none;
+    border-color: #0077b6;
+}
+
+#search-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #023e8a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#search-btn:hover {
+    background-color: #03045e;
+}
+
 .spinner {
     /* Your styling */
     animation: spin 1s linear infinite; /* Required */
