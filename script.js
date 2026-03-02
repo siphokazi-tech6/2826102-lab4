@@ -7,10 +7,10 @@ const spinner = document.getElementById('loading-spinner');
 async function searchCountry(countryName) {
     if(!countryName) return;
     
-    spinner.style.display = 'block';
+    spinner.classList.remove('hidden');
     countryInfo.innerHTML = '';
     borderSection.innerHTML = '';
-    document.getElementById('error-message').style.display = 'none';
+    document.getElementById('error-message').classList.add('hidden');
     
     try {
         const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`);
@@ -63,10 +63,10 @@ async function searchCountry(countryName) {
         // Show error message
         const errorElement = document.getElementById('error-message');
         errorElement.textContent = error.message;
-        errorElement.style.display = 'block';
+        errorElement.classList.remove('hidden');
     } finally {
         // Hide loading spinner
-        spinner.style.display = 'none';
+        spinner.classList.add('hidden');
     }
 }
 
